@@ -22,8 +22,6 @@ export const useWebSocketLogs = (wsProvider: WS | undefined) => {
         wsProvider.getTransactionReceipt(tx).then((receipt) => {
           console.log(receipt);
         });
-
-        setLogs((prev) => [...prev, tx]);
       });
     }
   }, [wsProvider]);
